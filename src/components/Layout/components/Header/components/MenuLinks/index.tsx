@@ -5,7 +5,6 @@ function MenuLinks() {
         "Novidades",
         "Vestidos",
         "Roupas",
-        "Roupas",
         "Sapatos",
         "Lingerie",
         "Acessórios",
