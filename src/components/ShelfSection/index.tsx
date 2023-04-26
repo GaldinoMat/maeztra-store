@@ -5,7 +5,7 @@ import ProductCard from "./ProductCard";
 
 function ShelfSection() {
   return (
-    <section className="mt-6">
+    <section className="mt-6 md:mt-20">
       <h2 className="text-center text-2xl font-bold text-[#353535] mb-[1.3125rem]">
         As Mais Pedidas
       </h2>

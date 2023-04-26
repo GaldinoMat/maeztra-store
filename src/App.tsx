@@ -7,8 +7,11 @@ import NewsletterSection from "./components/NewsletterSection";
 import AccordionSection from "./components/AccordionSection";
 import NewsletterLayover from "./components/NewsletterLayover";
 import { createPortal } from "react-dom";
+import useIsMobile from "./hooks/useIsMobile";
 
 function App() {
+  const isMobile = useIsMobile();
+
   return (
     <>
       <section>{createPortal(<NewsletterLayover />, document.body)}</section>
@@ -18,7 +21,7 @@ function App() {
       <ShelfSection />
       <InfoBoxSection />
       <NewsletterSection />
-      <AccordionSection />
+      {isMobile ? <AccordionSection /> : <AccordionSection />}
     </>
   );
 }
