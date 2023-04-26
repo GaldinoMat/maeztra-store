@@ -9,7 +9,7 @@ export interface DrawerTypes {
 function NavDrawer({ isDrawerOpen, setIsDrawerOpen }: DrawerTypes) {
   return (
     <nav
-      className={`fixed h-screen bg z-10 bottom-0 left-0 ${
+      className={`fixed h-screen bg z-20 bottom-0 left-0 ${
         isDrawerOpen ? "pointer-events-auto" : "pointer-events-none"
       }`}
     >
@@ -24,7 +24,7 @@ function NavDrawer({ isDrawerOpen, setIsDrawerOpen }: DrawerTypes) {
         <MyAccount />
       </section>
       <section
-        className={`bg-black w-screen h-screen transition-all ${
+        className={`bg-black w-screen z-20 h-screen transition-all ${
           isDrawerOpen ? "opacity-25" : "opacity-0"
         }`}
         onClick={() => setIsDrawerOpen(false)}

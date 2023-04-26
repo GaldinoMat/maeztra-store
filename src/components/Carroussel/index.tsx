@@ -30,7 +30,7 @@ function Carroussel({ children, hide, gap }: CarrousselProps) {
     <div className="relative">
       {!hide && (
         <button
-          className="lg:block absolute top-1/2 left-0 z-10 h-12 px-3 text-3xl"
+          className="block absolute top-1/2 left-0 z-10 h-12 px-3 text-3xl"
           onClick={() => {
             handleClick("left");
           }}
@@ -61,7 +61,7 @@ function Carroussel({ children, hide, gap }: CarrousselProps) {
       </div>
       {!hide && (
         <button
-          className="lg:block absolute top-1/2 right-0 z-10 h-12 px-3 text-3xl"
+          className="block absolute top-1/2 right-0 z-10 h-12 px-3 text-3xl"
           onClick={() => {
             handleClick("right");
           }}

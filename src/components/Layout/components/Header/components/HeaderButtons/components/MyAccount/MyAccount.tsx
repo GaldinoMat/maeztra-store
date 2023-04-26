@@ -4,8 +4,8 @@ import IconUser from "../../../../../../../../assets/icon-user.svg";
 function MyAccount() {
   return (
     <ButtonLayout>
-      <img src={IconUser} alt="small user icon" />
-      <p>Minha Conta</p>
+      <img className="md:w-4 md:h-4" src={IconUser} alt="small user icon" />
+      <p className="hidden lg:block lg:text-sm lg:text-[#353535]">Minha Conta</p>
     </ButtonLayout>
   );
 }

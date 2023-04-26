@@ -33,14 +33,14 @@ export const HeroArray = [
     AnchorText: "Conferir",
   },
   {
-    Text: "Confiras os melhores looks para combinar com você nesse Outono",
+    Text: "Confiras os melhores looks para combinar com você nesse Verão",
     TitleText: "Promoções de Verão",
     imageSRC: HeroBanner,
     AnchorLink: "/",
     AnchorText: "Conferir",
   },
   {
-    Text: "Confiras os melhores looks para combinar com você nesse Outono",
+    Text: "Confiras os melhores looks para combinar com você nesse Inverno",
     TitleText: "Promoções de Inverno",
     imageSRC: HeroBanner,
     AnchorLink: "/",
