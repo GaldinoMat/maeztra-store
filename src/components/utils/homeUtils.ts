@@ -78,7 +78,7 @@ export const AttractionArray = [
   },
 ];
 
-export const iconsArr = [
+export const iconsMobileArr = [
   Facebook,
   Linkedin,
   Instagram,
@@ -88,6 +88,10 @@ export const iconsArr = [
   visa2,
   mastercard2,
 ];
+
+export const iconsDeskArr1 = [Facebook, Linkedin, Instagram, youtube];
+
+export const iconsDeskArr2 = [visa, mastercard, visa2, mastercard2];
 
 export const brandsArray = [
   { src: Comma, isFirst: true },
@@ -155,5 +159,25 @@ export const productArray = [
     productSKUs: ["#1C1A19", "#D84E4B", "#CFC9B0", "#EAE9E5"],
     productDesc:
       "A satin mini skirt featuring an allover floral print, ruched side with self-tie closure, concealed back zipper, and a flounce hem.",
+  },
+];
+
+export const FooterLinks = [
+  {
+    title: "Informações",
+    links: [
+      "Quem Somos",
+      "Prazo de Envio",
+      "Trocas e Devoluções",
+      "Promoções e Cupons",
+    ],
+  },
+  {
+    title: "Minha Conta",
+    links: ["Minha Conta", "Meus Pedidos", "Cadastre-se"],
+  },
+  {
+    title: "Cadastre-se",
+    links: ["Lojas", "Endereço"],
   },
 ];

@@ -21,7 +21,7 @@ function App() {
       <ShelfSection />
       <InfoBoxSection />
       <NewsletterSection />
-      {isMobile ? <AccordionSection /> : <AccordionSection />}
+      {isMobile && <AccordionSection />}
     </>
   );
 }
