@@ -4,6 +4,7 @@ import BrandsSection from "./components/BrandsSection";
 import ShelfSection from "./components/ShelfSection";
 import InfoBoxSection from "./components/InfoBoxSection";
 import NewsletterSection from "./components/NewsletterSection";
+import AccordionSection from "./components/AccordionSection";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <ShelfSection />
       <InfoBoxSection />
       <NewsletterSection />
+      <AccordionSection />
     </>
   );
 }
