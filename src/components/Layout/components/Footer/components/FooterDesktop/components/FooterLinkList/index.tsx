@@ -12,7 +12,7 @@ function FooterLinkList({ LinkListTitle, Links }: FooterLinkList) {
       <ul className="flex flex-col gap-6">
         {Links.map((link) => (
           <li className="text-xs">
-            <a href="/" key={link}>
+            <a href="/maeztra-store/" key={link}>
               {link}
             </a>
           </li>

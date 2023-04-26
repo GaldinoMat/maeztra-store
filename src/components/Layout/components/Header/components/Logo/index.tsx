@@ -3,7 +3,7 @@ import SiteLogo from "../../../../../../assets/logo.svg";
 function Logo() {
   return (
     <section className="mr-auto ml-5">
-      <a href="/">
+      <a href="/maeztra-store/">
         <img
           className="md:w-[9.1875rem] h-[1.125rem]"
           src={SiteLogo}
