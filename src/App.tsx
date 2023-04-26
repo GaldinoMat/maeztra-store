@@ -3,6 +3,7 @@ import AttractionPointsSection from "./components/AttractionPointsSection";
 import BrandsSection from "./components/BrandsSection";
 import ShelfSection from "./components/ShelfSection";
 import InfoBoxSection from "./components/InfoBoxSection";
+import NewsletterSection from "./components/NewsletterSection";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <BrandsSection />
       <ShelfSection />
       <InfoBoxSection />
+      <NewsletterSection />
     </>
   );
 }
