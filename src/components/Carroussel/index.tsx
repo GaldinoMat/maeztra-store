@@ -6,9 +6,10 @@ interface CarrousselProps {
   children: ReactNode;
   hide?: boolean;
   gap?: boolean;
+  padding?: boolean
 }
 
-function Carroussel({ children, hide, gap }: CarrousselProps) {
+function Carroussel({ children, hide, gap, padding }: CarrousselProps) {
   const [currentSliderIndex, setCurrentSliderIndex] = useState(0);
   const dragSlider = useRef<HTMLDivElement>(null);
 
@@ -27,7 +28,7 @@ function Carroussel({ children, hide, gap }: CarrousselProps) {
   };
 
   return (
-    <div className="relative">
+    <div className={`relative ${padding && "md:px-4"}`}>
       {!hide && (
         <button
           className="block absolute top-1/2 left-0 z-10 h-12 px-3 text-3xl"
@@ -40,7 +41,7 @@ function Carroussel({ children, hide, gap }: CarrousselProps) {
       )}
       <div
         className={`flex overflow-x-auto scroll-smooth h-auto ${
-          gap ? "gap-4 md:gap-3" : ""
+          gap ? "gap-4" : ""
         } no-scrollbar`}
         ref={dragSlider}
       >

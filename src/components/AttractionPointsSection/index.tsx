@@ -9,7 +9,7 @@ function AttractionPointsSection() {
       <h2 className="text-center font-bold text-[#353535] mb-[1.3125rem]">
         Porque comprar na Maeztra?
       </h2>
-      <Carroussel hide gap>
+      <Carroussel hide gap padding>
         {AttractionArray.map((attractionPoint) => (
           <CarrousselItemWrapper
             isFirst={attractionPoint.isFirst}

@@ -16,7 +16,7 @@ function ProductCard({
   productSKUs,
 }: ProductCardProps) {
   return (
-    <div className="flex flex-col min-w-[19.25rem] h-[38.5rem]">
+    <div className="flex flex-col w-full min-w-[19.25rem] h-[38.5rem]">
       <div>
         <img src={productSRC} alt={productAlt} />
       </div>

@@ -8,7 +8,7 @@ function BrandsSection() {
       <h2 className="text-center text-2xl font-bold text-[#353535] mb-[1.3125rem]">
         Marcas Parceiras
       </h2>
-      <Carroussel hide gap>
+      <Carroussel hide gap padding>
         {brandsArray.map((brand) => (
           <CarrousselItemWrapper
             isFirst={brand.isFirst}
@@ -16,7 +16,7 @@ function BrandsSection() {
             key={brand.src}
           >
             <img
-              className="min-w-[18.625rem]"
+              className="min-w-[18.625rem] md:min-w-[15.75rem]"
               src={brand.src}
               alt="brand image"
             />

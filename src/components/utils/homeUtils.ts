@@ -104,6 +104,7 @@ export const productArray = [
     productPrice: 500,
     productTitle: "Faux Suede Mini Skirt",
     isFirst: true,
+    desktopMargin: true,
     productSKUs: ["#DEAC71", "#D37164", "#6497D3", "#3C3B79"],
     productDesc:
       "A faux suede mini skirt featuring exposed button-front closures and panel seam construction.",
@@ -149,6 +150,7 @@ export const productArray = [
     productAlt: "A white blouse matching with a black floral skirt",
     productPrice: 322,
     isLast: true,
+    desktopMargin: true,
     productTitle: "Ruched Rose Print Mini Skirt",
     productSKUs: ["#1C1A19", "#D84E4B", "#CFC9B0", "#EAE9E5"],
     productDesc:

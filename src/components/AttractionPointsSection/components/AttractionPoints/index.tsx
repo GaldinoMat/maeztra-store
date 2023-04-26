@@ -10,7 +10,7 @@ function AttractionPoints({
   AttractionText,
 }: AttractionPoints) {
   return (
-    <div className="flex items-center px-[1.625rem] h-16 py-[.875rem] gap-[1.3125rem] bg-[#EFEFEF] rounded min-w-[18.625rem]">
+    <div className="flex items-center px-[1.625rem] h-16 py-[.875rem] gap-[1.3125rem] bg-[#EFEFEF] rounded min-w-[18.625rem] md:min-w-[15.75rem]">
       <img src={imgSRC} alt="" className="max-w-none" />
       <div>
         <h4 className="font-bold text-sm">{AttractionTitle}</h4>
