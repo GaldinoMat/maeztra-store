@@ -40,22 +40,24 @@ function Carroussel({ children, hide, gap }: CarrousselProps) {
       )}
       <div
         className={`flex overflow-x-auto scroll-smooth h-auto ${
-          gap ? "gap-2 md:gap-3" : ""
+          gap ? "gap-4 md:gap-3" : ""
         } no-scrollbar`}
         ref={dragSlider}
       >
         {children}
-        <div className="absolute bottom-4 left-0 right-0 mx-auto w-fit flex gap-4">
-          {Children.count(children)
-            ? Children.map(children, (child, index) => (
-                <span
-                  className={`border border-[#FAA500] w-2 h-2 block rounded-full transition-all ${
-                    index === currentSliderIndex ? "bg-[#FAA500]" : ""
-                  }`}
-                />
-              ))
-            : null}
-        </div>
+        {!hide && (
+          <div className="absolute bottom-4 left-0 right-0 mx-auto w-fit flex gap-4">
+            {Children.count(children)
+              ? Children.map(children, (_child, index) => (
+                  <span
+                    className={`border border-[#FAA500] w-2 h-2 block rounded-full transition-all ${
+                      index === currentSliderIndex ? "bg-[#FAA500]" : ""
+                    }`}
+                  />
+                ))
+              : null}
+          </div>
+        )}
       </div>
       {!hide && (
         <button

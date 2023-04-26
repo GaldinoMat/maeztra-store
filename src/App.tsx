@@ -1,45 +1,15 @@
-import Carroussel from "./components/Carroussel";
-import Hero from "./components/Hero";
-import HeroBanner from "./assets/HeroBanner.svg";
+import HeroSection from "./components/HeroSection";
+import AttractionPointsSection from "./components/AttractionPointsSection";
+import BrandsSection from "./components/BrandsSection";
+import ShelfSection from "./components/ShelfSection";
 
 function App() {
-  const HeroArray = [
-    {
-      Text: "Confiras os melhores looks para combinar com você nesse Outono",
-      TitleText: "Promoções de Outono",
-      imageSRC: HeroBanner,
-      AnchorLink: "/",
-      AnchorText: "Conferir",
-    },
-    {
-      Text: "Confiras os melhores looks para combinar com você nesse Outono",
-      TitleText: "Promoções de Verão",
-      imageSRC: HeroBanner,
-      AnchorLink: "/",
-      AnchorText: "Conferir",
-    },
-    {
-      Text: "Confiras os melhores looks para combinar com você nesse Outono",
-      TitleText: "Promoções de Inverno",
-      imageSRC: HeroBanner,
-      AnchorLink: "/",
-      AnchorText: "Conferir",
-    },
-  ];
-
   return (
     <>
-      <Carroussel>
-        {HeroArray.map((hero) => (
-          <Hero
-            AnchorText={hero.AnchorText}
-            imageSRC={hero.imageSRC}
-            Text={hero.Text}
-            TitleText={hero.TitleText}
-            key={hero.TitleText}
-          />
-        ))}
-      </Carroussel>
+      <HeroSection />
+      <AttractionPointsSection />
+      <BrandsSection />
+      <ShelfSection />
     </>
   );
 }
