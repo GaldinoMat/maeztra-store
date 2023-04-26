@@ -54,6 +54,16 @@ function Carroussel({
     }
   };
 
+  const handleBulletClick = (index: number) => {
+    const { current } = dragSlider;
+
+    if (current !== null) {
+      current.scrollLeft = current.clientWidth * index;
+
+      setCurrentSliderIndex(index);
+    }
+  };
+
   return (
     <div
       className={`relative ${center && "lg:w-fit lg:mx-auto"} ${
@@ -93,8 +103,9 @@ function Carroussel({
           <div className="absolute bottom-4 left-0 right-0 mx-auto w-fit flex gap-4">
             {Children.count(children)
               ? Children.map(children, (_child, index) => (
-                  <span
-                    className={`border border-[#FAA500] w-2 h-2 block rounded-full transition-all ${
+                  <button
+                    onClick={() => handleBulletClick(index)}
+                    className={`border border-[#FAA500] w-2 h-2 md:w-4 md:h-4 block rounded-full transition-all ${
                       index === currentSliderIndex ? "bg-[#FAA500]" : ""
                     }`}
                   />
