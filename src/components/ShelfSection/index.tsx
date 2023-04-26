@@ -1,4 +1,7 @@
 import Carroussel from "../Carroussel";
+import CarrousselItemWrapper from "../Carroussel/components/CarrousselItemWrapper";
+import { productArray } from "../utils/homeUtils";
+import ProductCard from "./ProductCard";
 
 function ShelfSection() {
   return (
@@ -6,10 +9,23 @@ function ShelfSection() {
       <h2 className="text-center text-2xl font-bold text-[#353535] mb-[1.3125rem]">
         As Mais Pedidas
       </h2>
-      <Carroussel hide>
-        <div className="flex flex-col">
-          <div></div>
-        </div>
+      <Carroussel hide gap>
+        {productArray.map((product) => (
+          <CarrousselItemWrapper
+            isFirst={product.isFirst}
+            isLast={product.isLast}
+          >
+            <ProductCard
+              productPrice={product.productPrice}
+              productTitle={product.productTitle}
+              productAlt={product.productAlt}
+              productDesc={product.productDesc}
+              productSRC={product.productSRC}
+              productSKUs={product.productSKUs}
+              key={product.productPrice}
+            />
+          </CarrousselItemWrapper>
+        ))}
       </Carroussel>
     </section>
   );

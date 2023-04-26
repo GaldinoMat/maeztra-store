@@ -1,4 +1,5 @@
 import Carroussel from "../Carroussel";
+import CarrousselItemWrapper from "../Carroussel/components/CarrousselItemWrapper";
 import { brandsArray } from "../utils/homeUtils";
 
 function BrandsSection() {
@@ -9,18 +10,14 @@ function BrandsSection() {
       </h2>
       <Carroussel hide gap>
         {brandsArray.map((brand) => (
-          <img
-            className={`min-w-[18.625rem] ${
-              brand.isFirst
-                ? "ml-[1.9375rem]"
-                : brand.isLast
-                ? "mr-[1.9375rem]"
-                : ""
-            }`}
-            src={brand.src}
-            alt="brand image"
-            key={brand.src}
-          />
+          <CarrousselItemWrapper isFirst={brand.isFirst} isLast={brand.isLast}>
+            <img
+              className="min-w-[18.625rem]"
+              src={brand.src}
+              alt="brand image"
+              key={brand.src}
+            />
+          </CarrousselItemWrapper>
         ))}
       </Carroussel>
     </section>
