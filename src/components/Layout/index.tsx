@@ -10,7 +10,7 @@ function Layout({ children }: LayoutProps) {
   return (
     <div className="font-Titillium">
       <Header />
-      <main>{children}</main>
+      <main className="pb-14">{children}</main>
       <Footer />
     </div>
   );
