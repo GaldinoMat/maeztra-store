@@ -1,27 +1,9 @@
-import Facebook from "../../../../assets/facebook.svg";
-import Linkedin from "../../../../assets/Linkedin.svg";
-import Instagram from "../../../../assets/Instagram.svg";
-import youtube from "../../../../assets/youtube.svg";
-import visa from "../../../../assets/visa.svg";
-import mastercard from "../../../../assets/mastercard.svg";
-import visa2 from "../../../../assets/visa.svg";
-import mastercard2 from "../../../../assets/mastercard.svg";
 import LogoVtex from "../../../../assets/logo footer.svg";
 import MaeztraLogo from "../../../../assets/maeztra-logo.svg";
+import { iconsArr } from "../../../utils/homeUtils";
 import FooterLogoLayout from "./components/FooterLogoLayout";
 
 function Footer() {
-  const iconsArr = [
-    Facebook,
-    Linkedin,
-    Instagram,
-    youtube,
-    visa,
-    mastercard,
-    visa2,
-    mastercard2,
-  ];
-
   return (
     <footer className="bg-[#353535] text-white h-[14.5625rem] flex flex-wrap gap-6 px-20 py-6">
       {iconsArr.map((icon) => (

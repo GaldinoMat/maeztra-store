@@ -5,10 +5,13 @@ import ShelfSection from "./components/ShelfSection";
 import InfoBoxSection from "./components/InfoBoxSection";
 import NewsletterSection from "./components/NewsletterSection";
 import AccordionSection from "./components/AccordionSection";
+import NewsletterLayover from "./components/NewsletterLayover";
+import { createPortal } from "react-dom";
 
 function App() {
   return (
     <>
+      <section>{createPortal(<NewsletterLayover />, document.body)}</section>
       <HeroSection />
       <AttractionPointsSection />
       <BrandsSection />

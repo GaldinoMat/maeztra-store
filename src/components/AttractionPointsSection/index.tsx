@@ -14,12 +14,12 @@ function AttractionPointsSection() {
           <CarrousselItemWrapper
             isFirst={attractionPoint.isFirst}
             isLast={attractionPoint.isLast}
+            key={attractionPoint.AttractionTitle}
           >
             <AttractionPoints
               imgSRC={attractionPoint.imgSRC}
               AttractionText={attractionPoint.AttractionText}
               AttractionTitle={attractionPoint.AttractionTitle}
-              key={attractionPoint.AttractionTitle}
             />
           </CarrousselItemWrapper>
         ))}

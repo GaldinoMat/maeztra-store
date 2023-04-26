@@ -26,6 +26,7 @@ function ProductCard({
             <span
               style={{ backgroundColor: sku }}
               className="w-[1.6875rem] h-[1.6875rem] rounded"
+              key={sku}
             />
           ))}
         </div>

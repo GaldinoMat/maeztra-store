@@ -15,6 +15,15 @@ import AnnTaylor from "../../assets/anntaylor.svg";
 import Dress1 from "../../assets/dress1.svg";
 import Dress2 from "../../assets/dress2.svg";
 
+import Facebook from "../../assets/facebook.svg";
+import Linkedin from "../../assets/Linkedin.svg";
+import Instagram from "../../assets/Instagram.svg";
+import youtube from "../../assets/youtube.svg";
+import visa from "../../assets/visa.svg";
+import mastercard from "../../assets/mastercard.svg";
+import visa2 from "../../assets/visa2.svg";
+import mastercard2 from "../../assets/mastercard2.svg";
+
 export const HeroArray = [
   {
     Text: "Confiras os melhores looks para combinar com você nesse Outono",
@@ -67,6 +76,17 @@ export const AttractionArray = [
     AttractionText: "Em compras acima de R$ 499,00",
     isLast: true,
   },
+];
+
+export const iconsArr = [
+  Facebook,
+  Linkedin,
+  Instagram,
+  youtube,
+  visa,
+  mastercard,
+  visa2,
+  mastercard2,
 ];
 
 export const brandsArray = [

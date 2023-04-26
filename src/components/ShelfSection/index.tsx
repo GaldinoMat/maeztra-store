@@ -14,6 +14,7 @@ function ShelfSection() {
           <CarrousselItemWrapper
             isFirst={product.isFirst}
             isLast={product.isLast}
+            key={product.productPrice}
           >
             <ProductCard
               productPrice={product.productPrice}
@@ -22,7 +23,6 @@ function ShelfSection() {
               productDesc={product.productDesc}
               productSRC={product.productSRC}
               productSKUs={product.productSKUs}
-              key={product.productPrice}
             />
           </CarrousselItemWrapper>
         ))}

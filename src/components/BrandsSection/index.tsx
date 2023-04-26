@@ -10,12 +10,15 @@ function BrandsSection() {
       </h2>
       <Carroussel hide gap>
         {brandsArray.map((brand) => (
-          <CarrousselItemWrapper isFirst={brand.isFirst} isLast={brand.isLast}>
+          <CarrousselItemWrapper
+            isFirst={brand.isFirst}
+            isLast={brand.isLast}
+            key={brand.src}
+          >
             <img
               className="min-w-[18.625rem]"
               src={brand.src}
               alt="brand image"
-              key={brand.src}
             />
           </CarrousselItemWrapper>
         ))}
