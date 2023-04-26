@@ -6,8 +6,8 @@ function InfoBoxSection() {
   const { isMobile } = useIsMobile();
 
   return (
-    <section className="px-[1.9375rem] flex flex-col md:flex-row gap-6 mt-6 md:mt-20">
-      <div className="pr-4 md:w-1/3">
+    <section className="px-[1.9375rem] flex flex-col md:flex-row lg:justify-between gap-6 mt-6 md:mt-20 lg:px-36 md:items-center md:justify-center">
+      <div className="pr-4 md:w-1/3 lg:w-1/4">
         <h4 className="font-bold text-2xl">Lorem ipsum</h4>
         <p className="font-normal text-base md:text-sm mt-4">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum
@@ -17,7 +17,7 @@ function InfoBoxSection() {
           luctus ut vulputate scelerisque .
         </p>
       </div>
-      <div className="md:w-2/3">
+      <div className="md:w-2/3 lg:w-[71.5rem]">
         {isMobile ? (
           <img
             className="rounded w-full h-full"

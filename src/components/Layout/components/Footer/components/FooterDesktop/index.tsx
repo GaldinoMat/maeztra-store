@@ -11,7 +11,7 @@ import MaeztraLogo from "../../../../../../assets/maeztra-logo.svg";
 function FooterDesktop() {
   return (
     <section className="w-full text-[#353535]">
-      <div className="py-10 px-16 flex justify-between w-full">
+      <div className="py-10 px-16 lg:px-[31rem] flex justify-between w-full">
         {FooterLinks.map((footerLinkObj) => (
           <FooterLinkList
             LinkListTitle={footerLinkObj.title}
@@ -20,7 +20,7 @@ function FooterDesktop() {
           />
         ))}
       </div>
-      <div className="w-full h-[5.3125rem] bg-[#353535] mt-16 flex justify-between items-center px-6">
+      <div className="w-full h-[5.3125rem] bg-[#353535] mt-16 flex justify-between items-center px-6 lg:px-36">
         <div className="flex gap-[1.375rem]">
           {iconsDeskArr1.map((deskIcons) => (
             <img src={deskIcons} alt="footer icon" key={deskIcons} />

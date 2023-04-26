@@ -16,7 +16,7 @@ function NewsletterModal({ setModalOpen, modalOpen }: NewsletterModalProps) {
       } transition-all`}
     >
       <button
-        className="text-white absolute top-36 right-9 md:top-[17rem] md:right-12"
+        className="text-white absolute top-36 right-9 md:top-[17rem] md:right-12 lg:top-[13rem] lg:right-[38rem]"
         onClick={() => {
           localStorage.setItem("modalClosed", "true");
           setModalOpen(false);
@@ -32,7 +32,7 @@ function NewsletterModal({ setModalOpen, modalOpen }: NewsletterModalProps) {
             alt="a fit man, with black workout clothes tying his orange sneakers"
           />
         </div>
-        <div className="py-6 px-5">
+        <div className="py-6 px-5 md:flex md:flex-col md:justify-center">
           <div className="flex flex-col items-center gap-4 px-2">
             <img
               className="w-7 h-[1.8125rem]"
