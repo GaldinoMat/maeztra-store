@@ -7,10 +7,10 @@ import NewsletterSection from "./components/NewsletterSection";
 import AccordionSection from "./components/AccordionSection";
 import NewsletterLayover from "./components/NewsletterLayover";
 import { createPortal } from "react-dom";
-import useIsMobile from "./hooks/useIsMobile";
+import { useIsMobile } from "./hooks/useIsMobile";
 
 function App() {
-  const isMobile = useIsMobile();
+  const { isMobile } = useIsMobile();
 
   return (
     <>

@@ -1,6 +1,6 @@
 function SearchBar() {
   return (
-    <form action="" className="flex w-[27rem]">
+    <form action="" className="flex w-[27rem] lg:w-[49.375rem]">
       <input
         className="w-full bg-[#EFEFEF] py-1 h-10 px-6  rounded-tl-[.625rem] rounded-bl-[.625rem]"
         type="text"

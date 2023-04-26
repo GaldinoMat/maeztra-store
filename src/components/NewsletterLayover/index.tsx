@@ -7,8 +7,6 @@ function NewsletterLayover() {
   useEffect(() => {
     const modalMemory = localStorage.getItem("modalClosed");
 
-    console.log(modalMemory);
-
     if (!modalMemory) {
       setTimeout(() => {
         setModalOpen(true);

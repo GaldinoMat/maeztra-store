@@ -6,10 +6,21 @@ interface CarrousselProps {
   children: ReactNode;
   hide?: boolean;
   gap?: boolean;
-  padding?: boolean
+  padding?: boolean;
+  center?: boolean;
+  leftArrowPos?: number;
+  rightArrowPos?: number;
 }
 
-function Carroussel({ children, hide, gap, padding }: CarrousselProps) {
+function Carroussel({
+  children,
+  hide,
+  gap,
+  padding,
+  center,
+  leftArrowPos = 0,
+  rightArrowPos = 0,
+}: CarrousselProps) {
   const [currentSliderIndex, setCurrentSliderIndex] = useState(0);
   const dragSlider = useRef<HTMLDivElement>(null);
 
@@ -18,20 +29,41 @@ function Carroussel({ children, hide, gap, padding }: CarrousselProps) {
 
     if (current !== null) {
       if (direction === "left") {
-        current.scrollLeft -= current.offsetWidth;
-        setCurrentSliderIndex(currentSliderIndex - 1);
+        setCurrentSliderIndex((prevState: number) => {
+          const newState = currentSliderIndex - 1;
+
+          if (newState < 0) {
+            return prevState;
+          }
+
+          current.scrollLeft -= current.offsetWidth;
+          return newState;
+        });
       } else {
-        current.scrollLeft += current.offsetWidth;
-        setCurrentSliderIndex(currentSliderIndex + 1);
+        setCurrentSliderIndex((prevState: number) => {
+          const newState = currentSliderIndex + 1;
+
+          if (newState > Children.count(children) - 1) {
+            return prevState;
+          }
+
+          current.scrollLeft += current.offsetWidth;
+          return newState;
+        });
       }
     }
   };
 
   return (
-    <div className={`relative ${padding && "md:px-4"}`}>
+    <div
+      className={`relative ${center && "lg:w-fit lg:mx-auto"} ${
+        padding && "md:px-4"
+      }`}
+    >
       {!hide && (
         <button
-          className="block absolute top-1/2 left-0 z-10 h-12 px-3 text-3xl"
+          style={{ left: leftArrowPos }}
+          className="block absolute top-1/2 z-10 h-12 px-3 text-3xl"
           onClick={() => {
             handleClick("left");
           }}
@@ -39,8 +71,19 @@ function Carroussel({ children, hide, gap, padding }: CarrousselProps) {
           <img src={LeftArrow} alt="black left arrow" />
         </button>
       )}
+      {!hide && (
+        <button
+          style={{ right: rightArrowPos }}
+          className="block absolute top-1/2 z-10 h-12 px-3 text-3xl"
+          onClick={() => {
+            handleClick("right");
+          }}
+        >
+          <img src={RightArrow} alt="black right arrow" />
+        </button>
+      )}
       <div
-        className={`flex overflow-x-auto scroll-smooth h-auto ${
+        className={`flex overflow-x-auto mx-auto scroll-smooth h-auto ${
           gap ? "gap-4" : ""
         } no-scrollbar`}
         ref={dragSlider}
@@ -60,16 +103,6 @@ function Carroussel({ children, hide, gap, padding }: CarrousselProps) {
           </div>
         )}
       </div>
-      {!hide && (
-        <button
-          className="block absolute top-1/2 right-0 z-10 h-12 px-3 text-3xl"
-          onClick={() => {
-            handleClick("right");
-          }}
-        >
-          <img src={RightArrow} alt="black right arrow" />
-        </button>
-      )}
     </div>
   );
 }

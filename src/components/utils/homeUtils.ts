@@ -1,4 +1,5 @@
 import HeroBanner from "../../assets/HeroBanner.svg";
+import HeroDesktopBanner from "../../assets/desktopBanner.svg"
 
 import WorldLogo from "../../assets/World.svg";
 import HouseLogo from "../../assets/House.svg";
@@ -28,21 +29,24 @@ export const HeroArray = [
   {
     Text: "Confiras os melhores looks para combinar com você nesse Outono",
     TitleText: "Promoções de Outono",
-    imageSRC: HeroBanner,
+    mobileImageSRC: HeroBanner,
+    desktopImageSRC: HeroDesktopBanner,
     AnchorLink: "/",
     AnchorText: "Conferir",
   },
   {
     Text: "Confiras os melhores looks para combinar com você nesse Verão",
     TitleText: "Promoções de Verão",
-    imageSRC: HeroBanner,
+    mobileImageSRC: HeroBanner,
+    desktopImageSRC: HeroDesktopBanner,
     AnchorLink: "/",
     AnchorText: "Conferir",
   },
   {
     Text: "Confiras os melhores looks para combinar com você nesse Inverno",
     TitleText: "Promoções de Inverno",
-    imageSRC: HeroBanner,
+    mobileImageSRC: HeroBanner,
+    desktopImageSRC: HeroDesktopBanner,
     AnchorLink: "/",
     AnchorText: "Conferir",
   },

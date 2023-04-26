@@ -1,13 +1,19 @@
 import { useState, useLayoutEffect } from "react";
 
-const getIsMobile = () => window.innerWidth < 768;
+const getIsMobile = () => window.innerWidth < 767;
+const getIsTablet = () => window.innerWidth > 767 && window.innerWidth < 1023;
+const getIsDesktop = () => window.innerWidth > 1023;
 
-export default function useIsMobile() {
+export function useIsMobile() {
   const [isMobile, setIsMobile] = useState(getIsMobile());
+  const [isTablet, setIsTablet] = useState(getIsTablet());
+  const [isDesktop, setIsDesktop] = useState(getIsDesktop());
 
   useLayoutEffect(() => {
     const onResize = () => {
       setIsMobile(getIsMobile());
+      setIsTablet(getIsTablet());
+      setIsDesktop(getIsDesktop());
     };
 
     window.addEventListener("resize", onResize);
@@ -17,5 +23,5 @@ export default function useIsMobile() {
     };
   }, []);
 
-  return isMobile;
+  return { isMobile, isDesktop, isTablet };
 }

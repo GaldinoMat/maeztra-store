@@ -1,9 +1,9 @@
 import InfoBoxImage from "../../assets/infoImage.svg";
 import InfoBoxDesktop from "../../assets/infoBoxDesktop.svg";
-import useIsMobile from "../../hooks/useIsMobile";
+import { useIsMobile } from "../../hooks/useIsMobile";
 
 function InfoBoxSection() {
-  const isMobile = useIsMobile();
+  const { isMobile } = useIsMobile();
 
   return (
     <section className="px-[1.9375rem] flex flex-col md:flex-row gap-6 mt-6 md:mt-20">

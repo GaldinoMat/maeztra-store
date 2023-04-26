@@ -8,7 +8,7 @@ function BrandsSection() {
       <h2 className="text-center text-2xl font-bold text-[#353535] mb-[1.3125rem]">
         Marcas Parceiras
       </h2>
-      <Carroussel hide gap padding>
+      <Carroussel center hide gap padding>
         {brandsArray.map((brand) => (
           <CarrousselItemWrapper
             isFirst={brand.isFirst}
